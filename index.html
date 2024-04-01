@@ -1,48 +1,67 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-	
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hi!</title>
-	<style>
-		body {
-			background: #00b0ffb3;
-			user-select: none;
-		}
-		.center {
-			display: none;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-		.legenda {
-			display: none;
-			position: absolute;
-			top: 60%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-		h1 {
-			color: #eee;
-			font-family: 'Inconsolata', monospace;
-			font-size: 4rem;
-			text-shadow: 2px 2px 8px #007cb6b3;
-		}
-	</style>
-</head>
-<body>
-	<div class="center">
-		<h1>Absolutamente nada.</h1>
-	</div>
-	<div class="legenda">
-		<h1> &lt;3 </h1>
-	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="desktop">
+            <div class="applist">
+                <div class="col">
+                    <a href="https://github.com/smokeeaasd" class="app">
+                        <img src="./assets/images/apps/GitHub.png">
+                        <p>GitHub</p>
+                    </a>
+
+                    <a href="https://linkedin.com/in/lukinhaadev" class="app">
+                        <img src="./assets/images/apps/LinkedIn.png" style="margin-bottom: 4px;">
+                        <p>LinkedIn</p>
+                    </a>
+
+                    <a class="app" href="#main-projects">
+                        <img src="./assets/images/windows/Explorer.png" style="margin-bottom: 4px;">
+                        <p>Projetos</p>
+                    </a>
+                </div>
+            </div>
+
+            <div id="main-projects">
+
+            </div>
+
+            <!-- <div class="alert" id="greetings">
+                <div class="actionbar">
+                    <div id="title">
+                        <p>Hello World!</p>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+        <div class="taskbar">
+            <div class="app" style="margin-left: 12px;">
+                <img src="./assets/images/windows/Windows.png" />
+            </div>
+            <div class="app">
+                <img src="./assets/images/windows/Explorer.png" />
+            </div>
+            <div class="app">
+                <img src="./assets/images/apps/Chrome.png" />
+            </div>
+            <div class="app">
+                <img src="./assets/images/apps/VisualStudio2022.png" />
+            </div>
+            <div class="app">
+                <img src="./assets/images/apps/VSCode.png" />
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
