@@ -1,3 +1,7 @@
+@import url("./_applist.css");
+@import url("./_taskbar.css");
+@import url("./_window.css");
+@import url("../assets/fonts/segoe_ui.css");
 * {
     margin: 0;
     padding: 0;
@@ -8,59 +12,11 @@ body {
     background-color: #000;
     background: url("../assets/images/wallpaper.jpg");
     background-size: cover;
-}
-
-.taskbar {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 48px;
-    background-color: #1f1f1f;
-    border-top: 1px solid #3a3a3a;
-    display: flex;
-    align-items: center;
-    z-index: 0;
-}
-
-.taskbar .app img {
-    width: 32px;
-    filter: drop-shadow(0px 0px 3px #00000055);
-    user-select: none;
-}
-
-.taskbar .app {
-    display: flex;
-    align-items: center;
-    margin-left: 6px;
-    margin-right: 6px;
-    padding: 6px;
-    transition: 100ms;
-    border-radius: 2px;
+    overflow: hidden;
 }
 
 .desktop {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.taskbar .app:hover {
-    background-color: #55555555;
-}
-
-.desktop .app {
-    align-items: center;
-    color: #eee;
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    justify-content: center;
-    margin: 4px 10px;
-    text-decoration: none;
-    text-shadow: 0px 0px 2px #00000055;
-    transition: 100ms;
-    user-select: none;
-    width: fit-content;
-    padding: 4px 8px;
-    border-radius: 2px;
 }
 
 .col {
@@ -71,109 +27,33 @@ body {
     width: fit-content;
 }
 
-.desktop .app img {
+.desktop .applist .app img {
     width: 48px;
     margin-bottom: 2px;
 }
 
-.desktop .app:hover {
+.desktop .applist .app:hover {
     background-color: #eeeeee33;
-}
-
-.alert {
-    position: absolute;
-    width: 400px;
-    height: 600px;
-    top: 0px;
-    left: 0px;
-    margin: calc(50vh - 300px) calc(50vw - 200px);
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        filter: opacity(0);
-    }
-    to {
-        filter: opacity(1);
-    }
-}
-
-.actionbar {
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    height: 36px;
-    color: #222;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-}
-
-.actionbar p {
-    margin-left: 12px;
-}
-
-#title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-#close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 10%;
-    border-top-right-radius: inherit;
-    transition: 0.3s;
-    color: #111;
-}
-
-#close a {
-    pointer-events: auto;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: 200ms;
-}
-
-#close a:hover {
-    background-color: red;
-    border-top-right-radius: inherit;
-    color: #eee;
-}
-
-#home {
-    pointer-events: none;
-}
-
-#home:toggle {
-    display: none;
 }
 
 #main-projects {
     display: none;
 }
 
-#main-projects:target {
+#main-projects:target, #greetings:target {
     display: block;
+}
+
+
+.fg {
     position: absolute;
-    width: 700px;
-    height: 500px;
-    top: 92px;
-    left: 100px;
-    border-radius: 5px;
-    background-color: #eee;
-    animation: fade-n-grow 200ms forwards;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1;
+    animation: fadeOut 1s forwards;
 }
 
 @keyframes fade-n-grow {
@@ -185,17 +65,6 @@ body {
         filter: opacity(1);
         scale: 1;
     }
-}
-
-.fg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
-    z-index: 1;
-    animation: fadeOut 1s forwards;
 }
 
 @keyframes fadeOut {

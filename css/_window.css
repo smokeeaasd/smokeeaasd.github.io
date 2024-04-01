@@ -1,0 +1,127 @@
+.window .message {
+	margin: 16px;
+}
+
+.window .message p {
+	margin: 16px 0px;
+}
+
+.window .message p a {
+	text-decoration: none;
+}
+
+.window .button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 128px;
+	height: 48px;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	margin: 8px;
+}
+
+.window .button a {
+	background-color: #0099d1;
+	color: #eee;
+	text-decoration: none;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1rem;
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px #00000055;
+	width: inherit;
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.window {
+	display: none;
+}
+
+.window:target {
+	display: block;
+	position: absolute;
+	width: 700px;
+	height: 500px;
+	top: 92px;
+	left: 100px;
+	border-radius: 5px;
+	animation: fade-n-grow 200ms forwards;
+}
+
+#greetings {
+	background-color: #eee;
+}
+
+#main-projects {
+	background-color: #eee;
+}
+
+#skills {
+	display: flex;
+}
+
+#skills div {
+	margin: 0px 12px;
+}
+
+.project-list {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.project-list .app {
+	margin: 0px 8px;
+	text-decoration: none;	
+	display: flex;
+	align-items: center;
+	border-radius: 8px;
+	padding: 12px;
+	margin: 6px;
+	transition: 500ms;
+}
+
+.project-list .app>img {
+	margin-right: 8px;
+	width: 48px;
+}
+
+.project-list .app p {
+	color: #000;
+	font-family: 'Jetbrains Mono', monospace;
+}
+
+.project-list .app:hover {
+	background-color: #d9d9d9;
+}
+
+.project-list hr {
+	size: 1px;
+	border: 1px solid #222;
+}
+
+.badges {
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+.badges img:first-child {
+	margin-left: 16px;
+}
+.badges img {
+	width: 38px;
+	margin: 0px 8px;
+}
+
+.project-list hr {
+	margin: 0px 16px;
+	border: 1px solid #ddd;
+}
