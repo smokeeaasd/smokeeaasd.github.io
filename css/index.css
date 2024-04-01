@@ -184,3 +184,22 @@ body {
         scale: 1;
     }
 }
+
+.foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh:
+    background-color: #000;
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        filter: opacity(1)
+    }
+    to {
+        filter: opacity(0)
+    }
+}
