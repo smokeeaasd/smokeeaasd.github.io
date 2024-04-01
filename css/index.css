@@ -205,4 +205,10 @@ body {
     to {
         filter: opacity(0);
     }
+    99% {
+        display: block;
+    }
+    100% {
+        display: none;
+    }
 }
