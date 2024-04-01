@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: #000;
     background: url("../assets/images/wallpaper.jpg");
     background-size: cover;
 }
@@ -18,6 +19,7 @@ body {
     border-top: 1px solid #3a3a3a;
     display: flex;
     align-items: center;
+    z-index: 0;
 }
 
 .taskbar .app img {
@@ -185,21 +187,22 @@ body {
     }
 }
 
-.foreground {
+.fg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh:
+    height: 100vh;
     background-color: #000;
+    z-index: 1;
     animation: fadeOut 1s forwards;
 }
 
 @keyframes fadeOut {
     from {
-        filter: opacity(1)
+        filter: opacity(1);
     }
     to {
-        filter: opacity(0)
+        filter: opacity(0);
     }
 }
