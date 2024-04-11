@@ -1,0 +1,18 @@
+.footer {
+	background-color: #000;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;	
+	width: 100%;
+}
+
+.footer p {
+	margin: 0;
+	font-family: 'SF Pro', sans-serif;
+	font-size: var(--text-md);
+}
+
+.footer .container {
+	width: 90%;
+	margin: 0 auto;
+}

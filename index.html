@@ -14,9 +14,18 @@
 			<div id="loading-spin"></div>
 		</div>
 	</div>
+	<nav class="navbar">
+		<div class="container">
+			<a href="#hero" class="logo">~ home</a>
+			<ul class="nav-links">
+				<li><a href="#about">about</a></li>
+				<li><a href="#skills">skills</a></li>
+			</ul>
+		</div>
+	</nav>
 	<div class="container">
 		<header>
-			<div class="hero">
+			<div class="hero" id="hero">
 				<div id="gradient-circle"></div>
 				<div id="gradient-circle-2"></div>
 				<div class="title">
@@ -29,17 +38,17 @@
 
 				<div class="links">
 					<div class="link" id="link-1">
-						<div id="line"></div>
+						<div class="line"></div>
 						<p>follow me on instagram:</p>
 						<a href="https://instagram.com/lukinha.dev">@lukinha.dev</a>
 					</div>
 					<div class="link" id="link-2">
-						<div id="line"></div>
+						<div class="line"></div>
 						<p>star my projects on github: </p>
 						<a href="https://github.com/smokeeaasd">@smokeeaasd</a>
 					</div>
 					<div class="link" id="link-3">
-						<div id="line"></div>
+						<div class="line"></div>
 						<p>see my projects on linkedin</p>
 						<a href="https://linkedin.com/in/lukinhadev">@in/lukinhadev</a>
 					</div>
@@ -54,64 +63,70 @@
 			</div>
 		</header>
 
-		<div>
-			<div class="infos">
-				<div class="about-me">
-					<div class="title">
-						<h1>about me</h1>
-						<p>My name is Lucas, I was born in 2005 in Dois Córregos, Brazil, and I'm currently studying Multiplatform
-							Software Development at <a href="https://fatecjahu.edu.br/"
-								style="text-decoration: none; color: #7f00ff; font-weight: bold; cursor: pointer;">Faculdade de
-								Tecnologia de Jahu</a></p>
-					</div>
-				</div>
-				<div class="course">
-					<div class="title">
-						<h1>multiplatform software development</h1>
-						<p>Graduates of the Higher Technology Course in Multiplatform Software Development have the profile of a
-							professional who designs, develops and tests software for multiple platforms, Cloud applications and the
-							IoT.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="skills-svg">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-					<path fill="#000000" fill-opacity="1"
-						d="M0,128L48,128C96,128,192,128,288,144C384,160,480,192,576,202.7C672,213,768,203,864,192C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-					</path>
-				</svg>
-			</div>
-			<div class="skills">
+		<div class="about" id="about">
+			<div class="about-me">
 				<div class="title">
-					<h1>main skills</h1>
+					<h1>about me</h1>
+					<p>My name is Lucas, I was born in 2005 in Dois Córregos, Brazil, and I'm currently studying Multiplatform
+						Software Development at <a href="https://fatecjahu.edu.br/"
+							style="text-decoration: none; color: #7f00ff; font-weight: bold; cursor: pointer;">Faculdade de
+							Tecnologia de Jahu</a></p>
 				</div>
-
-				<div class="skill-list">
-					<div class="skill" id="sk-js">
-						<img src="./assets/icons/dev/javascript.png"/>
-					</div>
-					<div class="skill" id="sk-typescript">
-						<img src="./assets/icons/dev/typescript.png"/>
-					</div>
-					<div class="skill" id="sk-laravel">
-						<img src="./assets/icons/dev/laravel.png"/>
-					</div>
-					<div class="skill" id="sk-react">
-						<img src="./assets/icons/dev/react.png"/>
-					</div>
-					<div class="skill" id="sk-tailwind">
-						<img src="./assets/icons/dev/tailwind.png"/>
-					</div>
-					<div class="skill" id="sk-xamarin">
-						<img src="./assets/icons/dev/xamarin.png"/>
-					</div>
-					<div class="skill" id="sk-csharp">
-						<img src="./assets/icons/dev/csharp.png"/>
-					</div>
+			</div>
+			<div class="course">
+				<div class="title">
+					<h1>multiplatform software development</h1>
+					<p>Graduates of the Higher Technology Course in Multiplatform Software Development have the profile of a
+						professional who designs, develops and tests software for multiple platforms, Cloud applications and the
+						IoT.</p>
 				</div>
 			</div>
 		</div>
+
+		<div class="skills-svg">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path fill="#000000" fill-opacity="1"
+					d="M0,128L48,128C96,128,192,128,288,144C384,160,480,192,576,202.7C672,213,768,203,864,192C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+				</path>
+			</svg>
+		</div>
+
+		<div class="skills" id="skills">
+			<div class="title">
+				<h1>main skills</h1>
+			</div>
+
+			<div class="skill-list">
+				<div class="skill" id="sk-js">
+					<img src="./assets/icons/dev/javascript.png" alt="JavaScript">
+				</div>
+				<div class="skill" id="sk-typescript">
+					<img src="./assets/icons/dev/typescript.png" alt="TypeScript">
+				</div>
+				<div class="skill" id="sk-laravel">
+					<img src="./assets/icons/dev/laravel.png" alt="Laravel">
+				</div>
+				<div class="skill" id="sk-react">
+					<img src="./assets/icons/dev/react.png" alt="React">
+				</div>
+				<div class="skill" id="sk-tailwind">
+					<img src="./assets/icons/dev/tailwind.png" alt="Tailwind CSS">
+				</div>
+				<div class="skill" id="sk-xamarin">
+					<img src="./assets/icons/dev/xamarin.png" alt="Xamarin">
+				</div>
+				<div class="skill" id="sk-csharp">
+					<img src="./assets/icons/dev/csharp.png" alt="C#">
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; 2024 Lucas Alencar. Todos os direitos reservados.</p>
+			</div>
+		</footer>
+
 	</div>
 </body>
 

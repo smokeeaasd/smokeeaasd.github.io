@@ -4,6 +4,8 @@
 @import url("./modules/animations.css");
 @import url("./modules/loading.css");
 @import url("./modules/skills.css");
+@import url("./modules/navbar.css");
+@import url("./modules/footer.css");
 
 * {
 	margin: 0;
@@ -11,7 +13,12 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 @media only screen and (max-width: 720px) {
+
 	.about-me,
 	.course {
 		display: flex;
@@ -44,16 +51,18 @@ body {
 	align-items: center;
 }
 
-.hero-svg {
+.hero-svg,
+.skills-svg {
 	width: 100%;
-	margin-top: -1px;
 	shape-rendering: geometricPrecision;
 }
 
+.hero-svg {
+	margin-top: -1px;
+}
+
 .skills-svg {
-	width: 100%;
-	margin-bottom: -12px;
-	shape-rendering: geometricPrecision;
+	margin-bottom: -8px;
 }
 
 .hero .title {
@@ -75,7 +84,7 @@ body {
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	width: fit-content;
-	font-family: "Bodoni Antiqua", serif;
+	font-family: "Soin Sans Pro Bold", sans-serif;
 	font-size: var(--title-font-size);
 	width: fit-content;
 	animation: bg-spin 5s alternate infinite, glow 1s alternate infinite;
@@ -99,11 +108,9 @@ body {
 	position: absolute;
 	top: 80px;
 	left: 0px;
-
 	width: var(--gradient-circle-width);
 	height: calc(var(--gradient-circle-width) * 2);
 	background: linear-gradient(70deg, #7f00ff, #e100ff, #e100ff, #32CCBC);
-	/* box-shadow: 0px 0px 4px #e100ff; */
 	border-top-right-radius: 999vmax;
 	border-bottom-right-radius: 999vmax;
 }
@@ -112,11 +119,9 @@ body {
 	position: absolute;
 	top: 350px;
 	right: 0px;
-
 	width: var(--gradient-circle-width);
 	height: calc(var(--gradient-circle-width) * 2);
 	background: linear-gradient(70deg, #e100ff, #32CCBC, #32CCBC, #7f00ff);
-	/* box-shadow: 0px 0px 4px #7f00ff; */
 	border-top-left-radius: 999vmax;
 	border-bottom-left-radius: 999vmax;
 }
@@ -159,10 +164,10 @@ body {
 	filter: drop-shadow(0px 0px 2px #7f00ff);
 }
 
-.link #line {
-	width: 60px;
+.link .line {
+	width: 48px;
 	background-color: #555;
-	height: 4px;
+	height: 2px;
 	margin-right: 8px;
 	border-top-right-radius: 999vmax;
 	border-bottom-right-radius: 999vmax;
@@ -188,6 +193,13 @@ body {
 	animation-delay: 600ms;
 }
 
+#link-fatec {
+	text-decoration: none;
+	color: #7f00ff;
+	font-weight: bold;
+	cursor: pointer;
+}
+
 .about-me .title h1,
 .course .title h1 {
 	color: #000;
@@ -202,6 +214,10 @@ body {
 	font-family: "SF Pro", sans-serif;
 	font-size: var(--text-lg);
 	color: #444;
+}
+
+.about {
+	padding: 24px;
 }
 
 .about-me,
