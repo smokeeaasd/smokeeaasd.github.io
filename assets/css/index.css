@@ -4,8 +4,8 @@
 @import url("./modules/animations.css");
 @import url("./modules/loading.css");
 @import url("./modules/skills.css");
-@import url("./modules/navbar.css");
-@import url("./modules/footer.css");
+@import url("./modules/_navbar.css");
+@import url("./modules/_footer.css");
 
 * {
 	margin: 0;
