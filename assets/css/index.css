@@ -1,36 +1,28 @@
+@import url("./modules/root.css");
+@import url("./modules/scrollbar.css");
 @import url("./modules/fonts.css");
 @import url("./modules/animations.css");
-
-::-webkit-scrollbar {
-	background-color: #111;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #222;
-}
-
-:root {
-	--title-font-size: 5rem;
-	--description-font-size: 3rem;
-	--text-lg: 1.5rem;
-
-	--gradient-circle-width: 120px;
-}
-
-@media only screen and (max-width: 720px) {
-	:root {
-		--title-font-size: 2.75rem;
-		--description-font-size: 1.75rem;
-		--text-lg: 1rem;
-
-		--gradient-circle-width: 60px;
-	}
-}
+@import url("./modules/loading.css");
+@import url("./modules/skills.css");
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+@media only screen and (max-width: 720px) {
+	.about-me,
+	.course {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	.skill img {
+		width: 64px;
+	}
 }
 
 body {
@@ -55,11 +47,16 @@ body {
 .hero-svg {
 	width: 100%;
 	margin-top: -1px;
-	padding: 0px;
 	shape-rendering: geometricPrecision;
 }
 
-.title {
+.skills-svg {
+	width: 100%;
+	margin-bottom: -12px;
+	shape-rendering: geometricPrecision;
+}
+
+.hero .title {
 	width: fit-content;
 	display: flex;
 	flex-direction: column;
@@ -68,11 +65,11 @@ body {
 	user-select: none;
 }
 
-.title .description {
+.hero .title .description {
 	display: flex;
 }
 
-.title h1 {
+.hero .title h1 {
 	background: linear-gradient(75deg, #7f00ff, #7f00ff, #e100ff, #e100ff, #32CCBC);
 	background-size: 200% auto;
 	background-clip: text;
@@ -84,7 +81,7 @@ body {
 	animation: bg-spin 5s alternate infinite, glow 1s alternate infinite;
 }
 
-.title p {
+.hero .title p {
 	font-size: var(--description-font-size);
 	color: #fff;
 	font-family: "Soin Sans", sans-serif;
@@ -171,9 +168,12 @@ body {
 	border-bottom-right-radius: 999vmax;
 }
 
-#link-1, #link-2, #link-3 {
+#link-1,
+#link-2,
+#link-3 {
 	animation: slide-link 2s forwards;
 	transform: translateX(-100%);
+	user-select: none;
 }
 
 #link-1 {
@@ -186,4 +186,46 @@ body {
 
 #link-3 {
 	animation-delay: 600ms;
+}
+
+.about-me .title h1,
+.course .title h1 {
+	color: #000;
+	font-family: "SF Pro", sans-serif;
+	font-size: var(--title-font-size);
+}
+
+.about-me .title p,
+.course .title p {
+	max-width: 500px;
+	height: fit-content;
+	font-family: "SF Pro", sans-serif;
+	font-size: var(--text-lg);
+	color: #444;
+}
+
+.about-me,
+.course {
+	padding: 16px;
+}
+
+.infos {
+	width: 100%;
+	padding: 32px;
+	margin: 64px 0px;
+}
+
+.course {
+	display: flex;
+	justify-content: end;
+	text-align: end;
+}
+
+.course .title p {
+	max-width: 800px;
+}
+
+.course .title h1 {
+	max-width: 800px;
+	text-align: end;
 }

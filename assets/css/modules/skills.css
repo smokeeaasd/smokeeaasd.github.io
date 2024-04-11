@@ -1,0 +1,63 @@
+.skills {
+	background-color: #000;
+	padding: 32px;
+}
+
+.skills .title h1 {
+	color: #fff;
+	font-size: var(--title-font-size);
+	font-family: "SF Pro", serif;
+}
+
+.skills .title {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 64px;
+}
+
+.skill img {
+	width: 96px;
+}
+
+.skill-list {
+	display: flex;
+	flex-basis: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.skill {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 200ms;
+}
+
+
+#sk-js:hover {
+	box-shadow: 0px 0px 4px yellow;
+}
+
+#sk-typescript:hover {
+	box-shadow: 0px 0px 4px turquoise;
+}
+
+#sk-laravel:hover {
+	filter: drop-shadow(0px 0px 2px red);
+}
+
+#sk-react:hover {
+	filter: drop-shadow(0px 0px 2px turquoise);
+}
+
+#sk-tailwind:hover {
+	filter: drop-shadow(0px 0px 2px white);
+}
+
+#sk-xamarin:hover {
+	filter: drop-shadow(0px 0px 2px turquoise);
+}
+
+#sk-csharp:hover {
+	filter: drop-shadow(0px 0px 2px rebeccapurple);
+}

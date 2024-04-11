@@ -1,0 +1,25 @@
+:root {
+	--title-font-size: 5rem;
+	--description-font-size: 3rem;
+	--text-xxl: 2.5rem;
+	--text-xl: 1.75rem;
+	--text-lg: 1.5rem;
+	--text-md: 1.25rem;
+	--text-sm: 1rem;
+
+	--gradient-circle-width: 120px;
+}
+
+@media only screen and (max-width: 720px) {
+	:root {
+		--title-font-size: 2.75rem;
+		--description-font-size: 1.75rem;
+		--text-xxl: 2;
+		--text-xl: 1.35rem;
+		--text-lg: 1.2rem;
+		--text-md: 1rem;
+		--text-sm: 0.8rem;
+
+		--gradient-circle-width: 60px;
+	}
+}
