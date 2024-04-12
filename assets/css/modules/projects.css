@@ -1,0 +1,72 @@
+.project-section {
+	width: 100%;
+	padding: 16px;
+	background: linear-gradient(70deg, #7f00ff, #e100ff, #e100ff, #32ccbc);
+	border-radius: 8px;
+}
+
+#projects {
+	padding: 32px 0px;
+}
+
+.project {
+	padding: 16px;
+	border-radius: 8px;
+	background-color: #000;
+	margin: 16px 0px;
+}
+
+.project .title {
+	display: flex;
+	align-items: center;
+	margin: 8px 0px;
+}
+
+.project .title h1 {
+	font-size: var(--text-xxl);
+	margin-right: 8px;
+}
+
+.project .langs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.project .lang {
+	border-radius: 999vmax;
+	background-color: #7f00ff55;
+	margin: 0px 8px;
+	padding: 8px 16px;
+}
+
+.project .lang p {
+	font-size: var(--text-sm);
+	font-family: monospace;
+	color: #ffffff;
+}
+
+.project .description {
+	font-family: 'SF Pro', sans-serif;
+	color: #777;
+	font-size: var(--text-md);
+}
+
+.project .source {
+	margin: 8px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.project .source a {
+	text-decoration: none;
+	font-family: "SF Pro", sans-serif;
+	color: #7f00ff;
+	transition: 250ms;
+	font-size: var(--text-md);
+}
+
+.project .source a:hover {
+	text-shadow: 0px 0px 2px #7f00ff;
+}
