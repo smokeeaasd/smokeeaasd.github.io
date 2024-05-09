@@ -128,70 +128,15 @@ body {
 }
 
 .links {
-	position: absolute;
-	top: 500px;
-	left: 0px;
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: start;
-}
-
-.link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: var(--text-lg);
 }
 
-.link p {
-	font-family: 'SF Pro', sans-serif;
-	margin: 0px 2px;
-	color: #555;
-}
-
-.link a {
-	font-family: 'SF Pro', sans-serif;
-	background: linear-gradient(75deg, #7f00ff, #7f00ff, #e100ff, #e100ff, #32CCBC);
-	background-size: 200% auto;
-	background-clip: text;
-	text-decoration: none;
-	color: transparent;
-	margin: 0px 8px;
-	transition: 200ms;
-}
-
-.link a:hover {
-	filter: drop-shadow(0px 0px 2px #7f00ff);
-}
-
-.link .line {
-	width: 48px;
-	background-color: #555;
-	height: 2px;
-	margin-right: 8px;
-	border-top-right-radius: 999vmax;
-	border-bottom-right-radius: 999vmax;
-}
-
-#link-1,
-#link-2,
-#link-3 {
-	animation: slide-link 2s forwards;
-	transform: translateX(-100%);
-	user-select: none;
-}
-
-#link-1 {
-	animation-delay: 200ms;
-}
-
-#link-2 {
-	animation-delay: 400ms;
-}
-
-#link-3 {
-	animation-delay: 600ms;
+.links img {
+	width: 96px;
+	height: 96px;
+	margin: 0px 16px;
 }
 
 #link-fatec {
