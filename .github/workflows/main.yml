@@ -6,16 +6,16 @@ on:
       - main 
 
 jobs:
-  ftp_upload:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
+    - name: 🚚 Get latest code
       uses: actions/checkout@v4
-
-    - name: FTP Upload
+    
+    - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_URL }}
         username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        password: ${{ secrets.ftp_password }}
