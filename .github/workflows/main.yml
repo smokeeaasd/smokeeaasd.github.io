@@ -14,8 +14,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
       with:
-        server: ${{ secrets.FTP_URL }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        ftp_host: ${{ secrets.FTP_URL }}
+        ftp_username: ${{ secrets.FTP_USERNAME }}
+        ftp_password: ${{ secrets.FTP_PASSWORD }}
+        local_source_dir: ./
+        dist_target_dir: ./
