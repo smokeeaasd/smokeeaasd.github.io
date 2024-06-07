@@ -1,23 +1,21 @@
-name: Auto Update FTP
+name: FTP Upload
 
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
-  deploy:
+  ftp_upload:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout código
-      uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-    - name: FTP Deploy
-      uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+    - name: FTP Upload
+      uses: SamKirkland/FTP-Deploy-Action@4.3.5
       with:
-        ftp_host: ${{ secrets.FTP_URL }}
-        ftp_username: ${{ secrets.FTP_USERNAME }}
-        ftp_password: ${{ secrets.FTP_PASSWORD }}
-        local_source_dir: ./
-        dist_target_dir: ./
+        server: ${{ secrets.FTP_URL }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
