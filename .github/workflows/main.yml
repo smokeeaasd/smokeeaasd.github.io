@@ -12,6 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Instalar lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
       - name: Definir credenciais do FTP
         run: |
           echo FTP_HOST=${{ secrets.FTP_URL }}
