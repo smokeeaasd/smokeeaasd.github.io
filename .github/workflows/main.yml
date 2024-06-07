@@ -1,28 +1,23 @@
-name: Atualizar servidor FTP
+name: FTP Auto Upload
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main  # ajuste conforme a branch que você quer monitorar para as atualizações
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout código
+      uses: actions/checkout@v2
 
-      - name: Instalar lftp
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y lftp
-
-      - name: Definir credenciais do FTP
-        run: |
-          echo FTP_HOST=${{ secrets.FTP_URL }}
-          echo FTP_USERNAME=${{ secrets.FTP_USERNAME }}
-          echo FTP_PASSWORD=${{ secrets.FTP_PASSWORD }}
-
-      - name: Upload para o servidor FTP
-        run: |
-          lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R ./ ./"
+    - name: Conectando via FTP
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        server: ${{ secrets.FTP_URL }}  # Chave configurada em Settings > Secrets
+        username: ${{ secrets.FTP_USERNAME }}  # Chave configurada em Settings > Secrets
+        password: ${{ secrets.FTP_PASSWORD }}  # Chave configurada em Settings > Secrets
+        local-dir: ./  # Caminho local do seu repositório que você quer enviar
+        remote-dir: ./ # Diretório remoto onde você quer enviar os arquivos
