@@ -1,9 +1,9 @@
-name: FTP Auto Upload
+name: Auto Update FTP
 
 on:
   push:
     branches:
-      - main  # ajuste conforme a branch que você quer monitorar para as atualizações
+      - main
 
 jobs:
   deploy:
@@ -13,11 +13,9 @@ jobs:
     - name: Checkout código
       uses: actions/checkout@v2
 
-    - name: Conectando via FTP
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.FTP_URL }}  # Chave configurada em Settings > Secrets
-        username: ${{ secrets.FTP_USERNAME }}  # Chave configurada em Settings > Secrets
-        password: ${{ secrets.FTP_PASSWORD }}  # Chave configurada em Settings > Secrets
-        local-dir: ./  # Caminho local do seu repositório que você quer enviar
-        remote-dir: ./ # Diretório remoto onde você quer enviar os arquivos
+        server: ${{ secrets.FTP_URL }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
