@@ -1,0 +1,23 @@
+name: Atualizar servidor FTP
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Definir credenciais do FTP
+        run: |
+          echo FTP_HOST=${{ secrets.FTP_URL }}
+          echo FTP_USERNAME=${{ secrets.FTP_USERNAME }}
+          echo FTP_PASSWORD=${{ secrets.FTP_PASSWORD }}
+
+      - name: Upload para o servidor FTP
+        run: |
+          lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R ./ ./"
