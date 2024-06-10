@@ -1,0 +1,51 @@
+.skills {
+  margin: 16px 0px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: fit-content;
+}
+
+.skill-badge {
+  position: relative;
+  width: fit-content;
+  padding: 4px;
+  background-color: #111111;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-badge img {
+  width: 48px;
+  height: 48px;
+}
+
+#js,
+#ts,
+#dotnet {
+  border-radius: 4px;
+}
+
+.popup {
+  position: absolute;
+  top: -36px;
+  background-color: #111111;
+  color: #ffffff;
+  font-family: "Spiegel", sans-serif;
+  padding: 8px;
+  border-radius: 4px;
+  display: none;
+  opacity: 0;
+}
+
+.popup-active {
+  animation: fade-in 200ms forwards;
+  display: block;
+}

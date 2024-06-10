@@ -1,0 +1,45 @@
+.projects {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	width: fit-content;
+	gap: 8px;
+}
+
+.projects a {
+	text-decoration: none;
+}
+
+.project {
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 48px;
+	padding: 0px 8px;
+	color: #eeeeee;
+	gap: 8px;
+	transition: 200ms;
+}
+
+#agilis {
+	background-color: #8D00EC;
+}
+
+#opbv {
+	background-color: #111111;
+}
+
+.project:hover {
+	filter: brightness(0.8);
+}
+
+.project img {
+	width: 32px;
+	height: auto;
+}
+
+.project p {
+	font-family: "Spiegel", sans-serif;	
+	font-size: 1.25rem;
+}

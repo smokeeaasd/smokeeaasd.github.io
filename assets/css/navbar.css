@@ -1,0 +1,89 @@
+nav {
+  transform: translateX(128px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  transition: 500ms;
+  z-index: 1;
+}
+
+nav:hover {
+  transform: translateX(0px);
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0px 8px;
+  transition: 300ms;
+  text-decoration: none;
+}
+
+.link p {
+  font-family: "Beaufort for LOL";
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0px 0px 4px #00000055;
+}
+
+.link img {
+  user-select: none;
+  width: 72px;
+  height: 72px;
+  border-radius: 999vmax;
+}
+
+.link:hover {
+  scale: 1.05;
+}
+
+.link-icon {
+  border-radius: 999vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link:not([aria-current="page"]) {
+  filter: opacity(0.6);
+}
+
+.link:hover.link:not([aria-current="page"]) {
+  filter: opacity(0.8);
+}
+
+.link {
+  touch-action: manipulation;
+}
+
+@media (max-width: 640px) {
+  nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    flex-direction: row;
+    transform: translateX(0px);
+  }
+
+  nav p {
+    display: none;
+  }
+
+  .link img {
+    user-select: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 999vmax;
+  }
+}

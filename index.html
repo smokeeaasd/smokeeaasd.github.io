@@ -1,221 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <div class="loading">
+      <p id="load-title">
+        <span>LOADING</span>
+        <span id="load-percentage">(0%)</span>
+      </p>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Meu portfólio.</title>
-	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
-</head>
+      <div id="champion-list">
+        <h1>SELECIONE UM TEMA</h1>
+        <div class="champions">
+          <button id="yasuo" class="champion-select">
+            <img src="./assets/img/yasuo/icon.jpg" />
+          </button>
+          <button id="warwick" class="champion-select">
+            <img src="./assets/img/warwick/icon.jpg" />
+          </button>
+          <button id="senna" class="champion-select">
+            <img src="./assets/img/senna/icon.jpg" />
+          </button>
+          <button id="wukong" class="champion-select">
+            <img src="./assets/img/wukong/icon.jpg" />
+          </button>
+          <button id="neeko" class="champion-select">
+            <img src="./assets/img/neeko/icon.jpg" />
+          </button>
+          <button id="yone" class="champion-select">
+            <img src="./assets/img/yone/icon.jpg" />
+          </button>
+        </div>
+      </div>
 
-<body>
-	<div id="bg-fade">
-		<div id="loading">
-			<div id="loading-spin"></div>
-		</div>
-	</div>
-	<nav class="navbar">
-		<div class="container">
-			<a href="#hero" class="logo">~ home</a>
-			<ul class="nav-links">
-				<li><a href="#about">about</a></li>
-				<li><a href="#skills">skills</a></li>
-				<li><a href="#projects">projects</a></li>
-				<li><a href="#contact">contact</a></li>
-			</ul>
-		</div>
-	</nav>
-	<div class="container">
-		<header>
-			<div class="hero" id="hero">
-				<div id="gradient-circle"></div>
-				<div id="gradient-circle-2"></div>
-				<div class="title">
-					<h1>LUKINHA.DEV</h1>
-					<div class="description">
-						<p>fullstack developer</p>
-						<div id="cursor"></div>
-					</div>
-				</div>
-			</div>
-			<div class="hero-svg">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
-					<path fill="#000000" fill-opacity="1"
-						d="M0,64L48,85.3C96,107,192,149,288,170.7C384,192,480,192,576,186.7C672,181,768,171,864,154.7C960,139,1056,117,1152,112C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-					</path>
-				</svg>
-			</div>
-		</header>
+      <div id="warning">
+        <p>
+          Este portfólio foi criado seguindo a política do “Lenga-Lenga
+          Jurídico” da Riot Games com recursos pertencentes à Riot Games. A Riot
+          Games não endossa ou patrocina este projeto.
+        </p>
+      </div>
+    </div>
 
-		<div class="about" id="about">
-			<div class="about-me">
-				<div class="title">
-					<h1>about me</h1>
-					<p>My name is Lucas, I was born in 2005 in Dois Córregos, Brazil, and I'm currently studying
-						Multiplatform
-						Software Development at <a href="https://fatecjahu.edu.br/"
-							style="text-decoration: none; color: #7f00ff; font-weight: bold; cursor: pointer;">Faculdade
-							de
-							Tecnologia de Jahu</a></p>
-				</div>
-			</div>
-			<div class="course">
-				<div class="title">
-					<h1>multiplatform software development</h1>
-					<p>Graduates of the Higher Technology Course in Multiplatform Software Development have the profile
-						of a
-						professional who designs, develops and tests software for multiple platforms, Cloud applications
-						and the
-						IoT.</p>
-				</div>
-			</div>
-		</div>
+    <div class="container">
+      <nav>
+        <a class="link" href="#home" id="link-home">
+          <div class="link-icon">
+            <img src="./assets/img/yone/skill-passive.jpg" alt="Home" />
+          </div>
+          <p>HOME</p>
+        </a>
+        <a class="link" href="#about" id="link-about">
+          <div class="link-icon">
+            <img src="./assets/img/yone/skill-q.jpg" alt="About" />
+          </div>
+          <p>ABOUT</p>
+        </a>
+        <a class="link" href="#skills" id="link-skills">
+          <div class="link-icon">
+            <img src="./assets/img/yone/skill-w.jpg" alt="Skills" />
+          </div>
+          <p>SKILLS</p>
+        </a>
+        <a class="link" href="#projects" id="link-projects">
+          <div class="link-icon">
+            <img src="./assets/img/yone/skill-e.jpg" alt="Projects" />
+          </div>
+          <p>PROJECTS</p>
+        </a>
+        <a class="link" href="#contact" id="link-contact">
+          <div class="link-icon">
+            <img src="./assets/img/yone/skill-r.jpg" alt="Contact" />
+          </div>
+          <p>CONTACT</p>
+        </a>
+      </nav>
 
-		<div class="skills-svg">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-				<path fill="#000000" fill-opacity="1"
-					d="M0,128L48,128C96,128,192,128,288,144C384,160,480,192,576,202.7C672,213,768,203,864,192C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-				</path>
-			</svg>
-		</div>
+      <main>
+        <div id="page-home" class="page">
+          <div class="title">
+            <h1>LUCAS</h1>
+            <h2>FULLSTACK DEVELOPER</h2>
 
-		<div class="skills" id="skills">
-			<div class="title">
-				<h1>main skills</h1>
-			</div>
+            <p>
+              Olá, sou Lucas, nascido em 2005 em Dois Córregos. Atualmente,
+              estou cursando Desenvolvimento de Software Multiplataforma na
+              <a href="https://fatecjahu.edu.br/"
+                >Faculdade de Tecnologia de Jahu</a
+              >. Sou apaixonado por tecnologia e estou sempre buscando novas
+              formas de criar soluções digitais inovadoras.
+            </p>
+          </div>
+        </div>
 
-			<div class="skill-list">
-				<div class="skill" id="sk-js">
-					<img src="./assets/icons/dev/javascript.png" alt="JavaScript">
-				</div>
-				<div class="skill" id="sk-typescript">
-					<img src="./assets/icons/dev/typescript.png" alt="TypeScript">
-				</div>
-				<div class="skill" id="sk-laravel">
-					<img src="./assets/icons/dev/laravel.png" alt="Laravel">
-				</div>
-				<div class="skill" id="sk-react">
-					<img src="./assets/icons/dev/react.png" alt="React">
-				</div>
-				<div class="skill" id="sk-tailwind">
-					<img src="./assets/icons/dev/tailwind.png" alt="Tailwind CSS">
-				</div>
-				<div class="skill" id="sk-xamarin">
-					<img src="./assets/icons/dev/xamarin.png" alt="Xamarin">
-				</div>
-				<div class="skill" id="sk-csharp">
-					<img src="./assets/icons/dev/csharp.png" alt="C#">
-				</div>
-			</div>
+        <div id="page-about" class="page">
+          <div class="title">
+            <h1>SOBRE</h1>
+            <h2>DESENVOLVIMENTO DE SOFTWARE MULTIPLATAFORMA</h2>
 
-			<div class="title" id="projects">
-				<h1>projects</h1>
-			</div>
+            <p>
+              Os graduados do Curso Superior de Tecnologia em Desenvolvimento de
+              Software Multiplataforma têm o perfil de um profissional que
+              projeta, desenvolve e testa software para múltiplas plataformas,
+              aplicações Cloud e IoT.
+            </p>
+          </div>
+        </div>
 
-			<div class="project-section">
-				<div class="project-list">
-					<div class="project">
-						<div class="title">
-							<h1>Digital Bank App</h1>
-							<div class="langs">
-								<div class="lang">
-									<p>Xamarin.Forms</p>
-								</div>
-								<div class="lang">
-									<p>C#</p>
-								</div>
-								<div class="lang">
-									<p>PHP</p>
-								</div>
-							</div>
-						</div>
-						<div class="description">
-							<p>App that simulates the main functions of a digital bank. Mobile part made with
-								Xamarin.Forms and C#,
-								and API made with PHP</p>
-						</div>
+        <div id="page-skills" class="page">
+          <div class="title">
+            <h1>TECNOLOGIAS</h1>
+            <h2>PRINCIPAIS TECNOLOGIAS QUE EU USO</h2>
 
-						<div class="source">
-							<a href="https://github.com/smokeeaasd/appbancodigital">View the Mobile App on GitHub</a>
-							<a href="https://github.com/smokeeaasd/api-banco-digital">View the API on GitHub</a>
-						</div>
-					</div>
+            <p>
+              Como desenvolvedor fullstack, minhas principais ferramentas
+              incluem JavaScript e TypeScript para frontend e backend, React e
+              Tailwind para interfaces dinâmicas, Laravel para backend e Xamarin
+              e .NET para aplicativos móveis.
+            </p>
 
-					<div class="project">
-						<div class="title">
-							<h1>Hardware Store App</h1>
-							<div class="langs">
-								<div class="lang">
-									<p>React</p>
-								</div>
-								<div class="lang">
-									<p>TypeScript</p>
-								</div>
-								<div class="lang">
-									<p>Laravel</p>
-								</div>
-							</div>
-						</div>
-						<div class="description">
-							<p>Web application for registering and viewing hardware components</p>
-						</div>
+            <div class="skills">
+              <div class="skill">
+                <div class="skill-badge">
+                  <img src="./assets/icons/langs/javascript.svg" id="js" />
+                  <div class="popup" id="js-popup">JavaScript</div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-badge">
+                  <img src="./assets/icons/langs/typescript.svg" id="ts" />
+                  <div class="popup" id="ts-popup">TypeScript</div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-badge">
+                  <img src="./assets/icons/langs/dot-net.svg" id="dotnet" />
+                  <div class="popup" id="dotnet-popup">.NET</div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-badge">
+                  <img src="./assets/icons/frameworks/react.svg" />
+                  <div class="popup" id="react-popup">React</div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-badge">
+                  <img src="./assets/icons/frameworks/laravel.svg" />
+                  <div class="popup" id="laravel-popup">Laravel</div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-badge">
+                  <img src="./assets/icons/frameworks/tailwindcss.svg" />
+                  <div class="popup" id="dotnet-popup">TailwindCSS</div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-badge">
+                  <img src="./assets/icons/frameworks/xamarin.svg" />
+                  <div class="popup" id="dotnet-popup">Xamarin.Forms</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-						<div class="source">
-							<a href="https://github.com/smokeeaasd/app-loja-hardware">View the Web App on GitHub</a>
-							<a href="https://github.com/smokeeaasd/api_loja_hardware">View the API on GitHub</a>
-						</div>
-					</div>
+        <div id="page-projects" class="page">
+          <div class="title">
+            <h1>PROJETOS</h1>
+            <h2>PROJETOS EM QUE PARTICIPO</h2>
 
-					<div class="project">
-						<div class="title">
-							<h1>One Piece Game</h1>
-							<div class="langs">
-								<div class="lang">
-									<p>Unity</p>
-								</div>
-								<div class="lang">
-									<p>C#</p>
-								</div>
-							</div>
-						</div>
-						<div class="description">
-							<p>Fighting game based on the anime One Piece</p>
-						</div>
+            <p>
+              Confira uma seleção dos projetos em que tenho contribuição como
+              desenvolvedor.
+            </p>
+          </div>
 
-						<div class="source">
-							<a href="https://github.com/onepiecebonvoyage/onepiecebonvoyage">
-								View the Project on GitHub
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+          <div class="projects">
+            <a href="https://github.com/agilis-software">
+              <div class="project" id="agilis">
+                <img src="./assets/img/agilis_white2.png" alt="Agilis" />
+                <p>Agilis Software</p>
+              </div>
+            </a>
+            <a href="https://github.com/onepiecebonvoyage">
+              <div class="project" id="opbv">
+                <img
+                  src="./assets/icons/frameworks/unity.svg"
+                  alt="One Piece Bon Voyage"
+                />
+                <p>OnePieceBonVoyage</p>
+              </div>
+            </a>
+          </div>
+        </div>
 
-			<div id="contact">
-				<div class="title">
-					<h1>Contact</h1>
-				</div>
-				<div class="links">
-					<a href="https://github.com/smokeeaasd">
-						<img src="./assets/icons/links/github.png" alt="GitHub">
-					</a>
-					<a href="https://instagram.com/lukinha.dev">
-						<img src="./assets/icons/links/insta.png" alt="Instagram">
-					</a>
-					<a href="https://linkedin.com/in/lukinhadev">
-						<img src="./assets/icons/links/linkedin.png" alt="Linkedin">
-					</a>
-				</div>
-			</div>
-		</div>
+        <div id="page-contact" class="page">
+          <div class="title">
+            <h1>CONTATO</h1>
+            <h2>INFORMAÇÕES DE CONTATO</h2>
 
-		<footer class="footer">
-			<div class="container">
-				<p>&copy; 2024 Lucas Alencar. Todos os direitos reservados.</p>
-			</div>
-		</footer>
+            <p>
+              Fique à vontade para tirar quaisquer dúvidas ou dar sugestões.
+              Você pode entrar em contato comigo através dos seguintes meios:
+            </p>
+          </div>
 
-	</div>
-</body>
+          <div class="contacts">
+            <a href="https://instagram.com/lukinha.dev">
+              <div class="contact" id="instagram">
+                <img src="./assets/icons/social/insta.png" alt="Instagram" />
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/lukinhadev">
+              <div class="contact" id="linkedin">
+                <img src="./assets/icons/social/linkedin.png" alt="LinkedIn" />
+              </div>
+            </a>
+            <a href="https://github.com/smokeeaasd">
+              <div class="contact" id="github">
+                <img src="./assets/icons/social/github.png" alt="GitHub" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
 
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/skills.js"></script>
+  </body>
 </html>

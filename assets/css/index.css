@@ -1,193 +1,52 @@
-@import url("./modules/root.css");
-@import url("./modules/scrollbar.css");
-@import url("./modules/fonts.css");
-@import url("./modules/animations.css");
-@import url("./modules/loading.css");
-@import url("./modules/skills.css");
-@import url("./modules/projects.css");
-@import url("./modules/navbar.css");
-@import url("./modules/footer.css");
+@import url("../fonts/fonts.css");
+@import url("./animations.css");
+@import url("./loading.css");
+@import url("./navbar.css");
+@import url("./pages/main.css");
+
+:root {
+  --yasuo: url("../img/yasuo/splash-art.jpg");
+  --yone: url("../img/yone/splash-art.jpg");
+  --warwick: url("../img/warwick/splash-art.jpg");
+  --wukong: url("../img/wukong/splash-art.jpg");
+  --neeko: url("../img/neeko/splash-art.jpg");
+  --senna: url("../img/senna/splash-art.jpg");
+
+  --bg-image: var(--yone);
+}
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url("../img/cursor.png"), auto;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
-@media only screen and (max-width: 720px) {
-
-	.about-me,
-	.course {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-	}
-
-	.skill img {
-		width: 64px;
-	}
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-	background-color: #fff;
-	overflow-x: hidden;
+  background: linear-gradient(#00000088, #00000088),
+    var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+  background-color: #111;
 }
 
 .container {
-	width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
-.hero {
-	background-color: #000;
-	display: flex;
-	width: 100%;
-	height: 650px;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.hero-svg,
-.skills-svg {
-	width: 100%;
-	shape-rendering: geometricPrecision;
-}
-
-.hero-svg {
-	margin-top: -1px;
-}
-
-.skills-svg {
-	margin-bottom: -8px;
-}
-
-.hero .title {
-	width: fit-content;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	user-select: none;
-}
-
-.hero .title .description {
-	display: flex;
-}
-
-.hero .title h1 {
-	background: linear-gradient(75deg, #7f00ff, #7f00ff, #e100ff, #e100ff, #32CCBC);
-	background-size: 200% auto;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	width: fit-content;
-	font-family: "Soin Sans Pro Bold", sans-serif;
-	font-size: var(--title-font-size);
-	width: fit-content;
-	animation: bg-spin 5s alternate infinite, glow 1s alternate infinite;
-}
-
-.hero .title p {
-	font-size: var(--description-font-size);
-	color: #fff;
-	font-family: "Soin Sans", sans-serif;
-}
-
-#cursor {
-	background-color: #ffffff;
-	height: var(--description-font-size);
-	width: 0.2rem;
-	margin: 0px 16px;
-	animation: blink-caret 750ms alternate infinite;
-}
-
-#gradient-circle {
-	position: absolute;
-	top: 80px;
-	left: 0px;
-	width: var(--gradient-circle-width);
-	height: calc(var(--gradient-circle-width) * 2);
-	background: linear-gradient(70deg, #7f00ff, #e100ff, #e100ff, #32CCBC);
-	border-top-right-radius: 999vmax;
-	border-bottom-right-radius: 999vmax;
-}
-
-#gradient-circle-2 {
-	position: absolute;
-	top: 350px;
-	right: 0px;
-	width: var(--gradient-circle-width);
-	height: calc(var(--gradient-circle-width) * 2);
-	background: linear-gradient(70deg, #e100ff, #32CCBC, #32CCBC, #7f00ff);
-	border-top-left-radius: 999vmax;
-	border-bottom-left-radius: 999vmax;
-}
-
-.links {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.links img {
-	width: 96px;
-	height: 96px;
-	margin: 0px 16px;
-}
-
-#link-fatec {
-	text-decoration: none;
-	color: #7f00ff;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-.about-me .title h1,
-.course .title h1 {
-	color: #000;
-	font-family: "SF Pro", sans-serif;
-	font-size: var(--title-font-size);
-}
-
-.about-me .title p,
-.course .title p {
-	max-width: 500px;
-	height: fit-content;
-	font-family: "SF Pro", sans-serif;
-	font-size: var(--text-lg);
-	color: #444;
-}
-
-.about {
-	padding: 24px;
-}
-
-.about-me,
-.course {
-	padding: 16px;
-}
-
-.infos {
-	width: 100%;
-	padding: 32px;
-	margin: 64px 0px;
-}
-
-.course {
-	display: flex;
-	justify-content: end;
-	text-align: end;
-}
-
-.course .title p {
-	max-width: 800px;
-}
-
-.course .title h1 {
-	max-width: 800px;
-	text-align: end;
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
 }
