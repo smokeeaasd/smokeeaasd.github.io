@@ -1,0 +1,82 @@
+@import url("./skills.css");
+@import url("./projects.css");
+@import url("./contact.css");
+
+.page:not([aria-current="page"]) {
+  display: none;
+}
+
+.page {
+  opacity: 0;
+}
+
+.active {
+  animation: fadeIn 750ms forwards, slide 750ms forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.title {
+  font-family: "Beaufort for LOL";
+}
+
+.title h1 {
+  font-size: 4rem;
+  color: #eee;
+  text-shadow: 0px 0px 4px #00000099;
+  font-weight: 600;
+}
+
+.title h2 {
+  background: linear-gradient(to bottom, #fff6e6, #beaa8a, #7e7467);
+  background-clip: text;
+  color: transparent;
+  font-size: 1.75rem;
+  margin-top: -8px;
+  margin-left: 2px;
+  font-weight: 600;
+}
+
+.title p {
+  text-wrap: wrap;
+  margin: 8px 2px;
+  width: 560px;
+  font-size: 1.125rem;
+  font-family: "Spiegel", sans-serif;
+  color: #e7d7ca;
+  text-shadow: 0px 0px 4px #00000099;
+}
+
+.title p a {
+  text-decoration: none;
+  color: cyan;
+  transition: 200ms;
+}
+
+.title p a:hover {
+  color: rgb(0, 201, 201);
+}
+
+@media (max-width: 640px) {
+  .title h1 {
+    text-shadow: 0px 0px 4px #00000055;
+    font-size: 3rem;
+  }
+  .title p {
+    text-shadow: 0px 0px 2px #00000055;
+    width: 300px;
+  }
+}
